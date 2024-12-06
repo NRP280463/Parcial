@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primer HTML</title>
+    </head>
+    <body>
+        <h1>Bienvenido {{ nombre }}</h1>
+        <h3>PUCP</h3>
+        {% if rol == 'ADMIN' %}
+        <div>
+            ESTE ES UN ESPACIO PARA EL ADMINISTRADOR
+        </div>
+        {% endif %}
+        <h2>Lista de estudiantes</h2>
+        <ol>
+            {% for estudiante in estudiantes %}
+                <li>{{ estudiante }}</li>
+            {% endfor %}
+        </ol>
+        <div>
+            <a href="{% url 'app1:segundohtml' %}">Ir al SegundoHTML</a>
+        </div>
+    </body>
+</html>
